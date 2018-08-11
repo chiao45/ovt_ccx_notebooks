@@ -1,0 +1,9 @@
+******* projectVelocity>>> iteration=0, (new div)/(old div)= 1.670, divergence after projection= 1.32e+02 
+******* projectVelocity>>> iteration=1, (new div)/(old div)= 0.754, divergence after projection= 9.94e+01 
+******* projectVelocity>>> iteration=2, (new div)/(old div)= 0.847, divergence after projection= 8.41e+01 
+******* projectVelocity>>> iteration=3, (new div)/(old div)= 0.893, divergence after projection= 7.51e+01 
+******* projectVelocity>>> iteration=4, (new div)/(old div)= 0.921, divergence after projection= 6.92e+01 
+******* projectVelocity>>> iteration=5, (new div)/(old div)= 0.938, divergence after projection= 6.49e+01 
+******* projectVelocity>>> iteration=6, (new div)/(old div)= 0.949, divergence after projection= 6.16e+01 
+******* projectVelocity>>> iteration=7, (new div)/(old div)= 0.957, divergence after projection= 5.89e+01 
+--implicitPC-- initializePredictorCorrector: mCur=0, mOld=1 gf[mCur].t= 0.00e+00

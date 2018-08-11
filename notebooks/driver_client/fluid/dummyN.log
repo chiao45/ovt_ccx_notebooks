@@ -1,0 +1,94 @@
+
+***********************************************************************************
+             Cgins version 1.0                                 
+             -----------------                              
+ Solving: incompressible Navier Stokes, Boussinesq model                                                      
+
+ The overlapping grid was read from the file=[fluid/fluid_flat.hdf].
+ Number of processors=1.
+
+ cfl = 0.900000, tFinal=1.0000e+00, tPrint = 1.0000e-01 
+ Slow start is off. (slowStartCFL=2.500e-01, slowStartTime=-1.0000e+00, slowStartSteps=-1, slowStartRecomputeDt=100).
+ Time stepping method: implicit.
+ predictor order = 0 (0=use default), useNewImplicitMethod=0 (1=eval RHS with implicit routines).
+ number of corrections=1. 
+ recompute dt at least every 100 steps.
+
+ use 2nd order artificial dissipation, ad21=1.00e+00 ad22=1.00e+00
+ Interpolation type: interpolate computational variables 
+ Order of accuracy in space = 2
+ Order of accuracy in time = 2
+ Order of extrapolation for interpolation neighbours = 3
+ Order of extrapolation for second ghost line = 3
+ Order of extrapolation for outflow = 2
+ The interpolation width is the default value from the grid.
+
+Implicit time stepping. IMEX AB-CN scheme. Order of predictor corrector=2
+   implicit factor = 0.50, (.5=Crank-Nicolson, 1.=Backward Euler)
+   Implicit solver =yale, solver=[direct sparse solver, no pivoting + ], rel-tol=0.00e+00, abs-tol=0.00e+00 max iterations=default 
+   Implicit time stepping with all grids time integrated implicitly.
+
+ Storage: numberOfGridFunctionsToUse=2 (numberOfSolutionLevels=2), (holds u at different times)
+          numberOfExtraFunctionsToUse=3 (Holds RHS f = du/dt)
+
+  The equations are solved in a fixed reference frame.
+
+
+ nu=2.000000e-04, density=1, cdv=1, cDt=0.25, dtMax=1.79769e+307
+ Boussinesq: kThermal=0.02, thermalConductivity=5 (constant material properties)
+ Coefficient of thermal expansivity =0.00e+00 
+ gravity is on, acceleration due to gravity = (0.00e+00,-9.81e+00,0.00e+00)
+ Project the initial conditions.
+ Advection option = centered advection, upwindOrder=2.
+
+INS implicit time stepping: 
+ implicit variation = implicitViscous
+ useNewImplicitMethod=0 (1=use implicit RHS evaluation for dudt)
+ decouple implicit boundary conditions=0
+ refactor frequency=100
+ number of implicit solvers for velocity=3. 
+ useFullSystemForImplicitTimeStepping=0. scalarSystemForImplicitTimeStepping=1.
+
+ Outflow boundary condition is extrapolation (order of extrap.=2). (Other options: Neumann)
+ checkForInflowAtOutFlow=0. 0=use default outflow, 1=check locally for inflow, 2=expect inflow everywhere.
+
+ useAddedMassAlgorithm=0,
+ predicted pressure needed=0,
+
+ second order artificial diffusion is on: ad21=1.000000e+00, ad22=1.000000e+00 
+ fourth order artificial diffusion is off.
+ pressure equation solver: solver=yale, solver=[direct sparse solver, no pivoting + ], 
+ kappa = 2.000000e-02
+ thermalExpansivity = 0.000000e+00
+ adcBoussinesq = 0.000000e+00
+               Grid Data
+               ---------
+grid     name                   gridIndexRange(0:1,0:2)           gridPoints   hmx      hmn  
+   0:    stretched-OUTLET   ([ 0:   29],[ 0:   49],[ 0:    4])       7500   4.08e-02 3.72e-03 
+   1:     stretched-INLET   ([ 0:   29],[ 0:   49],[ 0:    4])       7500   4.08e-02 3.72e-03 
+   2: stretched-INTERFACE   ([ 0:   99],[ 0:   49],[ 0:    4])      25500   4.08e-02 3.72e-03 
+ total number of grid points =40500 (egir), min(hmn)=3.72e-03, max(hmn)=3.72e-03, max(hmx)=4.08e-02,  
+ number of possible multigrid levels=1.
+
+ grid   name                  side axis    boundary condition and name
+ ----   ----                  ---- ----    ---------------------------
+    0:    stretched-OUTLET     0    0      0 : none
+    0:    stretched-OUTLET     1    0      5 : outflow
+    0:    stretched-OUTLET     0    1      1 : noSlipWall
+    0:    stretched-OUTLET     1    1      1 : noSlipWall
+    0:    stretched-OUTLET     0    2      4 : slipWall
+    0:    stretched-OUTLET     1    2      4 : slipWall
+    1:     stretched-INLET     0    0      2 : inflowWithVelocityGiven
+    1:     stretched-INLET     1    0      0 : none
+    1:     stretched-INLET     0    1      4 : slipWall
+    1:     stretched-INLET     1    1      4 : slipWall
+    1:     stretched-INLET     0    2      4 : slipWall
+    1:     stretched-INLET     1    2      4 : slipWall
+    2: stretched-INTERFACE     0    0      0 : none
+    2: stretched-INTERFACE     1    0      0 : none
+    2: stretched-INTERFACE     0    1      1 : noSlipWall
+    2: stretched-INTERFACE     1    1      1 : noSlipWall
+    2: stretched-INTERFACE     0    2      4 : slipWall
+    2: stretched-INTERFACE     1    2      4 : slipWall
+***********************************************************************************
+
